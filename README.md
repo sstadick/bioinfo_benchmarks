@@ -7,26 +7,23 @@ The benchmarks are not trying to find the fastest way to solve the problem of co
 1. Scriptability - How easy is it to read from stdin and split lines?
 2. IO - Is there something inherently slow about how the language deals with IO?
 3. String Ops - Are the builtins for doing string manipulations efficient, or do they just look pretty?
-4. Array and String allocations - Does the compiler / interpreter optimize allocations? 
-5. (Not yet done) C binding - How easy is it to use a c library?
-6. (Not yet done) C interop - Is there a large cost to interacting with C libraries?
+4. Lightweight Classes - can we cheaply create a class to hold data?
+5. Array and String allocations - Does the compiler / interpreter optimize allocations? 
+6. (Not yet done) C binding - How easy is it to use a c library?
+7. (Not yet done) C interop - Is there a large cost to interacting with C libraries?
 
 ## Results
 
 Lang | Time
 ---|---
-Python3 | 0m1.693s
-Perl | 0m4.040s
-Crystal | 0m1.025s
-D | 0m2.048s
-D fast | 0m1.586s
-Nim | 0m1.851s
-Awk | 0m1.299s
+Python3 | 0m8.711s
+Perl | 0m13.431s
+D | 0m14.854s
+Nim | 0m6.265s
 
 ## Language version for results
 
 Python 3.6
 Perl 5.26
 Nim 0.19
-Crystal 0.28
 Dlang (dmd) v2.085.1

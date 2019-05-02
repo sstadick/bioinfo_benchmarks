@@ -1,9 +1,21 @@
 use strict;
 use warnings;
+use List::Util qw(sum);
 
-my $count = 0;
-while (my $length = <STDIN>) {
-    my @vals = split(/\t/, $length);
-    $count += scalar(@vals);
+sub create_records {
+    my @vals = @_;
+    my $count = scalar(grep {substr($_, 1, 5) =~ /bc/i} @vals);
+    return {
+        "name" => $vals[0],
+        "count" => $count
+    };
 }
-print $count . "\n";
+
+sub main {
+    my @records;
+    while(my $line = <STDIN>) {
+       push @records, create_records(split(/\t/, $line));
+    }
+    print sum(map {$_->{count}} @records) . "\n";
+}
+main();

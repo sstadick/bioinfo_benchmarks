@@ -1,11 +1,21 @@
-import strutils
+import strutils, sequtils, math
+
+type
+  Record = object
+    name: string
+    count: int
+
+proc createRecord(vals: seq[string]): Record =
+  var record: Record
+  var count = len(filter(vals, proc(x: string): bool = "bc" in toLower(x[1..4])))
+  record = Record(name: vals[0], count: count)
+  return record
 
 proc main() =
-  var c = 0
+  var records = newSeq[Record]()
   for line in stdin.lines:
-    var vals = line.split('\t')
-    c += len(vals)
+    records.add(createRecord(line.split('\t')))
 
-  echo(c)
+  echo(sum(map(records, proc(r: Record): int = r.count)))
 
 main()

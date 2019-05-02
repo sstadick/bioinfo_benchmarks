@@ -1,10 +1,28 @@
 import std.stdio;
 import std.array;
-void main(string[] args) {
-    auto count = 0;
-    foreach (line; stdin.byLine()) {
-        auto vals =  split(line, '\t');
-        count += vals.length;
+import std.uni;
+import std.algorithm;
+
+class Record {
+    char[] name;
+    ulong count;
+
+    this(char[] name, ulong count) {
+        this.name = name;
+        this.count = count;
     }
-    writeln(count);
+}
+
+Record create_record(char[][] vals) {
+    auto count = filter!(x => canFind(toLower(x)[1..4], "bc"))(vals).array().length;
+    auto record = new Record(vals[0], count);
+    return record;
+}
+
+void main(string[] args) {
+    Record[] records;
+    foreach (line; stdin.byLine()) {
+        records ~= create_record(split(line, '\t'));
+    }
+    writeln(sum(map!(x => x.count)(records)));
 }
