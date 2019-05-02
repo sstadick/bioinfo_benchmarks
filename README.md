@@ -10,3 +10,23 @@ The benchmarks are not trying to find the fastest way to solve the problem of co
 4. Array and String allocations - Does the compiler / interpreter optimize allocations? 
 5. (Not yet done) C binding - how easy is it to use a c library?
 6. (Not yet done) C interop - is there a large cost to interacting with C libraries?
+
+## Results
+
+Lang | Time
+---|---
+Python3 | 0m1.693s
+Perl | 0m4.040s
+Crystal | 0m1.025s
+D | 0m2.048s
+D fast | 0m1.586s
+Nim | 0m1.851s
+Awk | 0m1.299s
+
+## Language version for results
+
+Python 3.6
+Perl 5.26
+Nim 0.19
+Crystal 0.28
+Dlang (dmd) v2.085.1
