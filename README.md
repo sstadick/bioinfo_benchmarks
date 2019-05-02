@@ -1,4 +1,4 @@
-# Some Dubious Benchmarks
+# Some Dubious and Pragmatic Benchmarks
 
 This repo contains code for evaluating languages to use for string heavy programs (bioinformatics).
 
