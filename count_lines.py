@@ -1,6 +1,7 @@
 import sys
 
 class Record(object):
+    __slots__ = ["name", "count"]
     def __init__(self, name, count):
         self.name = name
         self.count = count

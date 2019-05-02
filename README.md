@@ -16,7 +16,7 @@ The benchmarks are not trying to find the fastest way to solve the problem of co
 
 Lang | Time
 ---|---
-Python3 | 0m8.711s
+Python3 | 0m8.211s
 Perl | 0m13.431s
 D | 0m14.854s
 Nim | 0m6.265s
