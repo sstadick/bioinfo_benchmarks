@@ -6,16 +6,14 @@ type
     count: int
 
 proc createRecord(vals: seq[string]): Record =
-  var record: Record
-  var count = len(filter(vals, proc(x: string): bool = "bc" in toLower(x[1..4])))
-  record = Record(name: vals[0], count: count)
-  return record
+  var count = len(vals.filterIt("bc" in toLower(it[1..3])))
+  result = Record(name: vals[0], count: count)
 
 proc main() =
   var records = newSeq[Record]()
   for line in stdin.lines:
     records.add(createRecord(line.split('\t')))
 
-  echo(sum(map(records, proc(r: Record): int = r.count)))
+  echo sum(records.mapIt(it.count))
 
 main()
