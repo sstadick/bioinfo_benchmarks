@@ -21,6 +21,7 @@ nim c -d:release count_lines_nim.nim >/dev/null 2>&1
 echo 'Nim'
 time < big.tsv  ./count_lines_nim
 
+
 # crystal build count_lines_cr.cr --release >/dev/null 2>&1
 # echo 'Crystal'
 # time < big.tsv  ./count_lines_cr

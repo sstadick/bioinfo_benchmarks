@@ -1,4 +1,4 @@
-import strutils, sequtils, math
+import strutils, sequtils, math, tables
 
 type
   Record = object
