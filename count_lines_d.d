@@ -21,8 +21,9 @@ Record create_record(char[][] vals) {
 
 void main(string[] args) {
     Record[] records;
+    // stdin.byLine.map!(l => create_record(split(l, '\t'))).map!(x => x.count).sum.writeln;
     foreach (line; stdin.byLine()) {
-        records ~= create_record(split(line, '\t'));
+        records ~= create_record(splitter(line, '\t'));
     }
     writeln(sum(map!(x => x.count)(records)));
 }

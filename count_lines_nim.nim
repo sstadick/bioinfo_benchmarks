@@ -1,14 +1,13 @@
-import strutils, sequtils, math
+import strutils, sequtils, math, tables
 
 type
   Record = object
     name: string
     count: int
 
-proc createRecord(vals: seq[string]): Record =
-  var record: Record
+proc createRecord(vals: seq[string]): Record=
   var count = len(filter(vals, proc(x: string): bool = "bc" in toLower(x[1..4])))
-  record = Record(name: vals[0], count: count)
+  var record = Record(name: vals[0], count: count)
   return record
 
 proc main() =

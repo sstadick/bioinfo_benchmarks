@@ -16,10 +16,10 @@ The benchmarks are not trying to find the fastest way to solve the problem of co
 
 Lang | Time
 ---|---
-Python3 | 0m8.211s
-Perl | 0m13.431s
-D | 0m14.854s
-Nim | 0m6.265s
+Python3 | 0m8.378s
+Perl | 0m11.855s *
+D | 0m14.528s
+Nim | 0m6.267s
 
 ## Language version for results
 
@@ -27,3 +27,7 @@ Python 3.6
 Perl 5.26
 Nim 0.19
 Dlang (dmd) v2.085.1
+
+## Implementation Notes
+
+I chose to use a class in Python because in a real life scenario, I would create a dataclass to take advantage of mypy / the type system. Classes are a little bit slower though. In Perl, I would likely not have used a class, since there is no real type benefit to doing so. I uses Moo here just level the playing field. If dicts are uses in the Perl and Python versions, they both go to about 7.5s, with Perl having a slight edge.
