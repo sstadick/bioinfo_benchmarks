@@ -29,8 +29,9 @@ Record create_record(R)(R vals) {
 
 void main(string[] args) {
     Record[] records;
+    // stdin.byLine.map!(l => create_record(split(l, '\t'))).map!(x => x.count).sum.writeln;
     foreach (line; stdin.byLine()) {
-    	// splitter is a lazy range of `line` split by `\t`
+    	  // splitter is a lazy range of `line` split by `\t`
         records ~= create_record(splitter(line, '\t'));
     }
     writeln(sum(map!(x => x.count)(records)));
