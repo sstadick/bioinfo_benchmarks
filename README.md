@@ -16,10 +16,10 @@ The benchmarks are not trying to find the fastest way to solve the problem of co
 
 Lang | Time
 ---|---
-Python3 | 0m8.378s
-Perl | 0m11.855s *
-D | 0m14.528s
-Nim | 0m6.267s
+Python3 | 0m8.727s
+Perl | 0m12.491s*
+D | 0m10.203s
+Nim | 0m5.962s
 
 * See Implementation notes
 
