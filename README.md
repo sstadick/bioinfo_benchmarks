@@ -21,6 +21,8 @@ Perl | 0m11.855s *
 D | 0m14.528s
 Nim | 0m6.267s
 
+* See Implementation notes
+
 ## Language version for results
 
 Python 3.6
