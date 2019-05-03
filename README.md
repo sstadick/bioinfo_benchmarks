@@ -32,4 +32,4 @@ Dlang (dmd) v2.085.1
 
 ## Implementation Notes
 
-I chose to use a class in Python because in a real life scenario, I would create a dataclass to take advantage of mypy / the type system. Classes are a little bit slower though. In Perl, I would likely not have used a class, since there is no real type benefit to doing so. I used Moo here just level the playing field. If dicts are uses in the Perl and Python versions, they both go to about 7.5s, with Perl having a slight edge.
+I chose to use a class in Python because in a real life scenario, I would create a dataclass to take advantage of mypy / the type system. Classes are a little bit slower though. In Perl, I would likely not have used a class, since there is no real type benefit to doing so. I used Class::XSAccessor here just level the playing field. If dicts are uses in the Perl and Python versions, they both go to about 7.5s, with Perl having a slight edge.
