@@ -23,8 +23,7 @@ Record create_record(R)(R vals) {
      */
     const count = vals.count!(x => canFind(toLower(x[1..4]), "bc"));
 
-    auto record = new Record(vals.front, count);
-    return record;
+    return new Record(vals.front, count);
 }
 
 void main(string[] args) {

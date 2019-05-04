@@ -12,14 +12,22 @@ The benchmarks are not trying to find the fastest way to solve the problem of co
 6. (Not yet done) C binding - How easy is it to use a c library?
 7. (Not yet done) C interop - Is there a large cost to interacting with C libraries?
 
+## Psuedocode
+
+```
+
+
+```
+
 ## Results
 
 Lang | Time
 ---|---
-Python3 | 0m8.788s
-Perl | 0m8.651s*
-D | 0m9.799s
-Nim | 0m5.874s
+Python3 | 0m8.201s
+Perl | 0m8.033s
+D - dmd | 0m10.229s
+D - ldc | 0m8.689s
+Nim | 0m5.901s
 
 * See Implementation notes
 
@@ -29,6 +37,7 @@ Python 3.6
 Perl 5.26
 Nim 0.19
 Dlang (dmd) v2.085.1
+Dlang (ldc2) 1.15.0
 
 ## Implementation Notes
 

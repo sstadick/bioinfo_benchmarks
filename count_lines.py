@@ -8,9 +8,8 @@ class Record(object):
 
 def create_record(vals):
     count = len([val for val in vals if "bc" in val[1:4].lower()])
-    record = Record(vals[0], count)
+    return Record(vals[0], count)
     # record = {"name": vals[0], "count": count}
-    return record
 
 def main():
     records = []
