@@ -14,9 +14,23 @@ The benchmarks are not trying to find the fastest way to solve the problem of co
 
 ## Psuedocode
 
+Input is a tab delimted file. The Python script may be easier to read :)
+
 ```
+object Record:
+    name: the first field in the line
+    count: the number of fields that have 'bc' between chars 1:4
 
+def create_record(list of fields):
+    count = numer of fields that contain 'bc', case insensitive, betwen chars 1:4
+    return Record object reflecting the passed in line
 
+def main:
+    read lines from stdin
+        split line on '\t'
+        send line to create_record function
+
+    print the sum or the counts of each record
 ```
 
 ## Results
