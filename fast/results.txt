@@ -1,0 +1,12 @@
+Python
+4000000
+Perl
+4000000
+Dlang dmd
+4000000
+Dlang ldc
+4000000
+Nim
+4000000
+gawk
+6000000
