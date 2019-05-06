@@ -9,9 +9,9 @@ time < big.tsv python3 ./count_lines.py
 echo 'Perl'
 time < big.tsv perl count_lines.pl
 
-dmd -release ./count_lines_d.d >/dev/null 2>&1
-echo 'Dlang dmd'
-time < big.tsv  ./count_lines_d
+# dmd -release ./count_lines_d.d >/dev/null 2>&1
+# echo 'Dlang dmd'
+# time < big.tsv  ./count_lines_d
 
 ldc2 -release ./count_lines_d.d  >/dev/null 2>&1
 echo 'Dlang ldc'

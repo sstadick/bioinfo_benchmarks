@@ -1,12 +1,30 @@
 Python
 4000000
+
+real	0m5.689s
+user	0m5.631s
+sys	0m0.049s
 Perl
 4000000
-Dlang dmd
-4000000
+
+real	0m5.578s
+user	0m5.532s
+sys	0m0.039s
 Dlang ldc
 4000000
+
+real	0m8.572s
+user	0m8.513s
+sys	0m0.054s
 Nim
 4000000
+
+real	0m4.467s
+user	0m4.407s
+sys	0m0.053s
 gawk
 6000000
+
+real	0m16.194s
+user	0m16.132s
+sys	0m0.054s

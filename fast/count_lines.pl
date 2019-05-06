@@ -10,4 +10,4 @@ sub main {
     }
     print "$cnt\n";
 }
-main();
+main()
