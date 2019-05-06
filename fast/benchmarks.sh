@@ -27,4 +27,4 @@ time < big.tsv  ./count_lines_nim
 # time < big.tsv  ./count_lines_cr
 
 echo 'gawk'
-time < big.tsv gawk -F'\t' '{for (i=0; i < NF; i++) {if (tolower(substr($i, 2, 2)) == "bc") {count++}}}END{print count}'
+time < big.tsv gawk -F'\t' '{for (i=1; i <= NF; i++) {if (index(tolower(substr($i, 1, 3)), "bc") != 0) {count++}}}END{print count}'
