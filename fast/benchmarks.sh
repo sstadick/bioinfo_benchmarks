@@ -21,6 +21,14 @@ nim c -d:release count_lines_nim.nim >/dev/null 2>&1
 echo 'Nim'
 time < big.tsv  ./count_lines_nim
 
+echo 'R Base'
+time < big.tsv Rscript ./count_lines_base.R
+
+echo 'R Parallel'
+time < big.tsv Rscript ./count_lines_parallel.R
+
+echo 'R Dplyr'
+time < big.tsv Rscript ./count_lines_dplyr.R
 
 # crystal build count_lines_cr.cr --release >/dev/null 2>&1
 # echo 'Crystal'
