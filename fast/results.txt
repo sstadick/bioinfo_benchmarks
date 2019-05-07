@@ -1,48 +1,48 @@
 Python
 4000000
 
-real    0m5.903s
-user    0m5.799s
-sys     0m0.070s
+real    0m6.632s
+user    0m6.286s
+sys     0m0.168s
 Perl
 4000000
 
-real    0m6.023s
-user    0m5.859s
-sys     0m0.098s
+real    0m5.958s
+user    0m5.834s
+sys     0m0.082s
 Dlang ldc
 4000000
 
-real    0m9.642s
-user    0m9.426s
-sys     0m0.149s
+real    0m9.444s
+user    0m9.289s
+sys     0m0.112s
 Nim
 4000000
 
-real    0m4.572s
-user    0m4.498s
-sys     0m0.064s
+real    0m4.663s
+user    0m4.569s
+sys     0m0.076s
 R Base
 [1] 4000000
 
-real    0m5.738s
-user    0m5.019s
-sys     0m0.619s
+real    0m6.421s
+user    0m5.546s
+sys     0m0.722s
 R Parallel
 [1] 4000000
 
-real    0m2.956s
-user    0m8.918s
-sys     0m0.733s
+real    0m3.679s
+user    0m10.072s
+sys     0m0.939s
 R Dplyr
 [1] 4000000
 
-real    0m5.919s
-user    0m5.169s
-sys     0m0.638s
+real    0m6.483s
+user    0m5.699s
+sys     0m0.682s
 gawk
 4000000
 
-real    0m16.950s
-user    0m16.797s
-sys     0m0.106s
+real    0m17.374s
+user    0m17.176s
+sys     0m0.131s
