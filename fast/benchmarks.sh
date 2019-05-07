@@ -21,6 +21,10 @@ nim c -d:release count_lines_nim.nim >/dev/null 2>&1
 echo 'Nim'
 time < big.tsv  ./count_lines_nim
 
+nim c -d:release count_lines_parallel_nim.nim >/dev/null 2>&1
+echo 'Nim Parallel'
+time < big.tsv ./count_lines_parallel_nim 
+
 echo 'R Base'
 time < big.tsv Rscript ./count_lines_base.R
 
