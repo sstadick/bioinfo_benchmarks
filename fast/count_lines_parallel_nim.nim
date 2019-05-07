@@ -8,7 +8,7 @@ func countBC(chunk: string): int =
 
 
 proc main() =
-    var chunkSize = 1_000_000
+    let chunkSize = 20_000
     var responses = newSeq[FlowVar[int]]()
     var buffer = newString(chunksize)
     var oldBufferLen = 0
