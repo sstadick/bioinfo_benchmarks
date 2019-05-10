@@ -2,7 +2,6 @@ use std::io::stdin;
 use std::io::prelude::*;
 
 
-#[derive(Debug)]
 struct Record {
     pub name: String,
     pub count: usize
@@ -40,7 +39,6 @@ fn main() {
     }
     let count: usize = records.iter().map(|r| r.count).sum();
     println!("{}", count);
-    println!("{:?}", &records[0])
 }
 
 
