@@ -46,6 +46,12 @@ R Dplyr
 real	0m6.985s
 user	0m6.153s
 sys	0m0.716s
+Rust
+4000000
+
+real    0m0.756s
+user    0m0.718s
+sys     0m0.036s
 gawk
 4000000
 
