@@ -21,6 +21,11 @@ nim c -d:release count_lines_nim.nim >/dev/null 2>&1
 echo 'Nim'
 time < big.tsv  ./count_lines_nim
 
+echo 'Rust'
+pushd rust > /dev/null
+cargo build --release >/dev/null 2>&1
+popd > /dev/null
+time < big.tsv ./rust/target/release/count_lines
 
 # crystal build count_lines_cr.cr --release >/dev/null 2>&1
 # echo 'Crystal'

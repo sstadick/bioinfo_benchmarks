@@ -21,7 +21,7 @@ nim c -d:release count_lines_nim.nim >/dev/null 2>&1
 echo 'Nim'
 time < big.tsv  ./count_lines_nim
 
-nim c -d:release count_lines_parallel_nim.nim >/dev/null 2>&1
+nim c -d:release --threads:on count_lines_parallel_nim.nim >/dev/null 2>&1
 echo 'Nim Parallel'
 time < big.tsv ./count_lines_parallel_nim 
 
@@ -33,6 +33,12 @@ time < big.tsv Rscript ./count_lines_parallel.R
 
 echo 'R Dplyr'
 time < big.tsv Rscript ./count_lines_dplyr.R
+
+echo 'Rust'
+pushd rust > /dev/null
+cargo build --release
+popd > /dev/null
+time < big.tsv ./rust/target/release/count_lines
 
 # crystal build count_lines_cr.cr --release >/dev/null 2>&1
 # echo 'Crystal'
