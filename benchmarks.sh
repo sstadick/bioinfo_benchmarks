@@ -17,7 +17,7 @@ ldc2 -release ./count_lines_d.d  >/dev/null 2>&1
 echo 'Dlang ldc'
 time < big.tsv  ./count_lines_d
 
-nim c -d:release count_lines_nim.nim >/dev/null 2>&1
+nim c -d:release --passC:-march=native --passC:-ffast-math count_lines_nim.nim >/dev/null 2>&1
 echo 'Nim'
 time < big.tsv  ./count_lines_nim
 
