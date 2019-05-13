@@ -22,6 +22,12 @@ Nim
 real    0m2.506s
 user    0m2.234s
 sys     0m0.250s
+Nim Low
+4000000
+
+real    0m0.167s
+user    0m0.136s
+sys     0m0.030s
 Nim Parallel
 4000000
 
