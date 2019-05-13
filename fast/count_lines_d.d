@@ -6,11 +6,13 @@ import std.algorithm;
 void main()
 {
     auto count = 0;
-    foreach (line; stdin.byLine())
+    char[] buf;
+    while (stdin.readln(buf))
     {
-        foreach (val; splitter(line, '\t'))
+        toLowerInPlace(buf);
+        foreach (val; splitter(buf, '\t'))
         {
-            if (canFind(toLower(val[1 .. 4]), "bc"))
+            if (canFind(val[1 .. 4], "bc"))
             {
                 count++;
             }

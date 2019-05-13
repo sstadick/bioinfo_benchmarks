@@ -21,7 +21,7 @@ Record create_record(R)(R vals) {
      * - replacing filter() with a single call to count()
      * - only performing toLower() on the part of the string we care about
      */
-    const count = vals.count!(x => canFind(toLower(x[1..4]), "bc"));
+    const count = vals.count!(x => canFind(x[1..4], "bc"));
 
     return new Record(vals.front, count);
 }
@@ -31,6 +31,7 @@ void main(string[] args) {
     // stdin.byLine.map!(l => create_record(split(l, '\t'))).map!(x => x.count).sum.writeln;
     foreach (line; stdin.byLine()) {
     	  // splitter is a lazy range of `line` split by `\t`
+        toLowerInPlace(line);
         records ~= create_record(splitter(line, '\t'));
     }
     writeln(sum(map!(x => x.count)(records)));
