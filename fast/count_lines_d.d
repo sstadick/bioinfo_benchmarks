@@ -1,10 +1,11 @@
-import std.stdio;
-import std.array;
-import std.uni;
-import std.algorithm;
+
 
 void main()
 {
+    import std.stdio;
+    import std.array;
+    import std.uni;
+    import std.algorithm;
     auto count = 0;
     char[] buf;
     while (stdin.readln(buf))
