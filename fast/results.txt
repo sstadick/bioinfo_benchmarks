@@ -1,67 +1,73 @@
 Python
 4000000
 
-real	0m6.038s
-user	0m5.890s
-sys	0m0.087s
+real    0m3.445s
+user    0m3.297s
+sys     0m0.141s
 Perl
 4000000
 
-real	0m5.739s
-user	0m5.637s
-sys	0m0.067s
+real    0m3.298s
+user    0m3.172s
+sys     0m0.109s
 Dlang ldc
 4000000
 
-real	0m2.242s
-user	0m2.160s
-sys	0m0.066s
+real    0m1.951s
+user    0m1.688s
+sys     0m0.203s
 Nim
 4000000
 
-real	0m2.004s
-user	0m1.944s
-sys	0m0.055s
+real    0m2.499s
+user    0m2.188s
+sys     0m0.313s
+Nim Custom
+4000000
+
+real    0m0.762s
+user    0m0.594s
+sys     0m0.156s
 Nim Low
 4000000
 
-real	0m0.168s
-user	0m0.139s
-sys	0m0.028s
+real    0m0.294s
+user    0m0.109s
+sys     0m0.172s
 Nim Parallel
 4000000
 
-real	0m0.483s
-user	0m3.279s
-sys	0m0.132s
+real    0m0.702s
+user    0m4.688s
+sys     0m0.219s
 Nim Parallel Simple
 4000000
 
-real	0m0.879s
-user	0m2.825s
-sys	0m0.065s
+real    0m0.849s
+user    0m3.625s
+sys     0m0.188s
 R Base
 [1] 4000000
 
-real	0m5.835s
-user	0m5.099s
-sys	0m0.627s
+real    0m3.202s
+user    0m3.922s
+sys     0m0.563s
 R Parallel
 [1] 4000000
 
-real	0m2.785s
-user	0m9.083s
-sys	0m0.788s
+real    0m1.910s
+user    0m5.953s
+sys     0m0.906s
 Rust
-    Finished release [optimized] target(s) in 0.23s
+    Finished release [optimized] target(s) in 0.01s
 4000000
 
-real	0m0.805s
-user	0m0.759s
-sys	0m0.040s
+real    0m0.788s
+user    0m0.672s
+sys     0m0.109s
 gawk
 4000000
 
-real	0m16.807s
-user	0m16.642s
-sys	0m0.111s
+real    0m8.824s
+user    0m8.516s
+sys     0m0.297s
