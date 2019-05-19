@@ -1,7 +1,5 @@
 import strutils, sequtils
 
-
-
 proc main() =
   var count = 0
   let bufferLen = 12_000

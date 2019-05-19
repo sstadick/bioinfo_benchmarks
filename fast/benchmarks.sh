@@ -17,6 +17,10 @@ nim c -d:release --passC:-march=native --passC:-flto count_lines_nim.nim >/dev/n
 echo 'Nim'
 time < big.tsv  ./count_lines_nim
 
+nim c -d:release --passC:-march=native --passC:-flto count_lines_custom_nim.nim >/dev/null 2>&1
+echo 'Nim Custom'
+time < big.tsv  ./count_lines_custom_nim
+
 nim c -d:release --passC:-march=native --passC:-flto count_lines_low_nim.nim >/dev/null 2>&1
 echo 'Nim Low'
 time < big.tsv  ./count_lines_low_nim
