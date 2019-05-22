@@ -1,3 +1,4 @@
+# Ubuntu
 Python
 4000000
 
@@ -71,3 +72,71 @@ gawk
 real    0m8.824s
 user    0m8.516s
 sys     0m0.297s
+
+# Mac
+Perl Regexy
+4000000
+
+real    0m4.724s
+user    0m4.671s
+sys     0m0.042s
+Python
+4000000
+
+real    0m6.210s
+user    0m6.026s
+sys     0m0.088s
+Perl
+4000000
+
+real    0m5.457s
+user    0m5.407s
+sys     0m0.042s
+Dlang ldc
+4000000
+
+real    0m2.155s
+user    0m2.074s
+sys     0m0.050s
+Nim
+4000000
+
+real    0m2.002s
+user    0m1.949s
+sys     0m0.050s
+Nim Custom
+4000000
+
+real    0m0.812s
+user    0m0.762s
+sys     0m0.048s
+Nim Low
+4000000
+
+real    0m0.172s
+user    0m0.142s
+sys     0m0.029s
+Nim Parallel
+4000000
+
+real    0m0.506s
+user    0m3.261s
+sys     0m0.150s
+Nim Parallel Simple
+4000000
+
+real    0m0.842s
+user    0m2.478s
+sys     0m0.074s
+Rust
+4000000
+
+real    0m0.788s
+user    0m0.742s
+sys     0m0.037s
+gawk
+4000000
+
+real    0m16.853s
+user    0m16.697s
+sys     0m0.087s
