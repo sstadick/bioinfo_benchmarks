@@ -6,13 +6,14 @@ from strformat import fmt
 
 proc wordCount(file: File): (int, int, int) {.inline.} =
   const bufferSize = 1024 * 4
-  var buffer: array[bufferSize, uint8]
-  var totalLines = 0
-  # var totalChars = 0
-  var totalWords = 0
-  var totalBytes = 0
-  var files = newSeq[File]()
-  var inWord = true
+  var
+    buffer: array[bufferSize, uint8]
+    totalLines = 0
+  # totalChars = 0
+    totalWords = 0
+    totalBytes = 0
+    files = newSeq[File]()
+    inWord = true
   while true:
     let bytesRead = file.readBytes(buffer, 0, bufferSize)
     if bytesRead == 0:

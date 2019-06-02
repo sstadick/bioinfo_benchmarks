@@ -3,6 +3,9 @@
 awk 'BEGIN{for (i=0; i<2000000; i++){print "abcdef\tghijk\tlmnop\tqrstuv\twxyz1234\tABCDEF\tHIJK\tLMNOP\tQRSTUV\tWXYZ123"}}' > big.tsv
 cat big.tsv > /dev/null
 # Compile and run the programs
+echo 'Perl Regexy'
+time <big.tsv perl ./count_lines_perlish.pl
+
 echo 'Python'
 time < big.tsv python3 ./count_lines.py 
 
