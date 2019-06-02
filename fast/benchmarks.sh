@@ -1,10 +1,16 @@
 #/usr/sh
 # Generate test file
 awk 'BEGIN{for (i=0; i<2000000; i++){print "abcdef\tghijk\tlmnop\tqrstuv\twxyz1234\tABCDEF\tHIJK\tLMNOP\tQRSTUV\tWXYZ123"}}' > big.tsv
-
+cat big.tsv > /dev/null
 # Compile and run the programs
 echo 'Python'
 time < big.tsv python3 ./count_lines.py 
+
+echo 'pypy3'
+time < big.tsv pypy3 ./count_lines.py
+
+echo 'pypy3 low'
+time < big.tsv pypy3 ./count_lines_low.py
 
 echo 'Perl'
 time < big.tsv perl count_lines.pl
