@@ -1,14 +1,14 @@
 using Base
 
+function checkBC(val)
+    return occursin("bc", lowercase(val[2:4]))
+end
+
 function main()
     count = 0
-    for line in eachline(stdin)
-        for col in split(lowercase(line), "\t")
-            if findfirst("bc", col[1:4]) != nothing
-                count += 1
-            end
-        end
-    end
+    # for line in eachline(stdin)
+    #     count += sum(checkBC, split(line, '\t'))
+    # end
     println(count)
 end
 

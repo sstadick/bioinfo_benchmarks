@@ -2,12 +2,20 @@
 # Generate test file
 awk 'BEGIN{for (i=0; i<2000000; i++){print "abcdef\tghijk\tlmnop\tqrstuv\twxyz1234\tABCDEF\tHIJK\tLMNOP\tQRSTUV\tWXYZ123"}}' > big.tsv
 
+cat big.tsv > /dev/null
 # Compile and run the programs
 echo 'Python'
 time < big.tsv python3 ./count_lines.py 
 
+echo 'pypy3 Python'
+time < big.tsv pypy3 ./count_lines.py
+
 echo 'Perl'
 time < big.tsv perl count_lines.pl
+
+kotlinc ./count_lines.kt -d ./count_lines.jar -include-runtime
+echo 'Kotlin'
+time < big.tsv java -jar ./count_lines.jar
 
 ldc2 -release ./count_lines_d.d  >/dev/null 2>&1
 echo 'Dlang ldc'

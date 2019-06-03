@@ -18,6 +18,9 @@ time < big.tsv pypy3 ./count_lines_low.py
 echo 'Perl'
 time < big.tsv perl count_lines.pl
 
+echo 'Julia'
+time < big.tsv julia --inline=yes --math-mode=fast -O 3 --check-bounds=no count_lines.jl
+
 ldc2 -release ./count_lines_d.d  >/dev/null 2>&1
 echo 'Dlang ldc'
 time < big.tsv  ./count_lines_d

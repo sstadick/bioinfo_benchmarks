@@ -1,9 +1,5 @@
 import sys
 
-def lower_byte(byte):
-    if byte >= 65 and byte <= 90:
-        byte += 32
-    return byte
 
 def main():
     count = 0
@@ -20,8 +16,8 @@ def main():
             else:
                 colIndex += 1
             if colIndex == 1 or colIndex == 2:
-                if lower_byte(buffer[i]) == 98:
-                    if lower_byte(buffer[i+1]) == 99:
+                if   buffer[i] == 98 or  buffer[i] == 66:
+                    if  buffer[i+1] == 99 or  buffer[i+1] == 67:
                         count += 1
     print(count)
 
