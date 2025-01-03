@@ -62,3 +62,9 @@ time < big.tsv ./rust/target/release/count_lines
 
 echo 'gawk'
 time < big.tsv gawk -F'\t' '{for (i=1; i <= NF; i++) {if (index(tolower(substr($i, 1, 3)), "bc") != 0) {count++}}}END{print count}'
+
+echo 'Mojo'
+pushd mojo > /dev/null
+magic run mojo build -I /Users/u103330/dev/personal/ExtraMojo count_lines.mojo 2>&1
+popd > /dev/null
+time < big.tsv ./mojo/count_lines

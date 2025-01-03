@@ -1,9 +1,9 @@
 #/usr/sh
 # Generate test file
-awk 'BEGIN{for (i=0; i<2000000; i++){print "abcdef\tghijk\tlmnop\tqrstuv\twxyz1234\tABCDEF\tHIJK\tLMNOP\tQRSTUV\tWXYZ123"}}' > big.tsv
+awk 'BEGIN{for (i=0; i<2000000; i++){print "abcdef\tghijk\tlmnop\tqrstuv\twxyz1234\tABCDEF\tHIJK\tLMNOP\tQRSTUV\tWXYZ123\tabcdef\tghijk\tlmnop\tqrstuv\twxyz1234\tABCDEF\tHIJK\tLMNOP\tQRSTUV\tWXYZ123\tabcdef\tghijk\tlmnop\tqrstuv\twxyz1234\tABCDEF\tHIJK\tLMNOP\tQRSTUV\tWXYZ123\tabcdef\tghijk\tlmnop\tqrstuv\twxyz1234\tABCDEF\tHIJK\tLMNOP\tQRSTUV\tWXYZ123\tabcdef\tghijk\tlmnop\tqrstuv\twxyz1234\tABCDEF\tHIJK\tLMNOP\tQRSTUV\tWXYZ123\tabcdef\tghijk\tlmnop\tqrstuv\twxyz1234\tABCDEF\tHIJK\tLMNOP\tQRSTUV\tWXYZ123"}}' > big.tsv
 
 cat big.tsv > /dev/null
-# Compile and run the programs
+Compile and run the programs
 echo 'Python'
 time < big.tsv python3 ./count_lines.py 
 
@@ -30,3 +30,9 @@ pushd rust > /dev/null
 cargo build --release >/dev/null 2>&1
 popd > /dev/null
 time < big.tsv ./rust/target/release/count_lines
+
+echo 'Mojo'
+pushd mojo > /dev/null
+magic run mojo build -I /Users/u103330/dev/personal/ExtraMojo count_lines.mojo 2>&1
+popd > /dev/null
+time < big.tsv ./mojo/count_lines

@@ -1,0 +1,15 @@
+[project]
+authors = ["Seth Stadick <sstadick@gmail.com>"]
+channels = ["conda-forge", "https://conda.modular.com/max"]
+description = "Add a short description here"
+name = "mojo"
+platforms = ["osx-arm64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+max = ">=24.6.0,<25"
+# Source deps not yet allowed.
+# Alternatively, pull it in when this lands: https://github.com/modular/modular-community/pull/40
+# ExtraMojo = { git = "https://github.com/ExtraMojo/ExtraMojo.git", tag = "v0.3.1" }
